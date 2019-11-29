@@ -19,6 +19,11 @@ app.post('/login', function (req, res) {
   res.send("login success");
 });
 
+// just to check the logs
+app.get('/logs', function (req, res) {
+  res.sendFile(logger.LOG_FILE, { root: __dirname });
+});
+
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
