@@ -15,4 +15,9 @@ WORKDIR /app
 
 COPY . .
 
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+
+RUN npm install
+
 CMD [ "../node-rasp/node", "app.js"]
